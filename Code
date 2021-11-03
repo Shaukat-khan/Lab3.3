@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function myFunc() { 
+  var val = document.getId('phoneNumber').val;
+    
+  if(val.length == 3 || val.length == 7) 
+    document.getId('phoneNumber').val = val + "-";
+   if(val.length >= 12)
+    document.getId('phoneNumber').val = val.substring(0, 12)
+}
+</script>
+</head>
+<body>
+<input type = "text" id = "phoneNumber" name = "phoneNumber" 
+onkeyup = "myFunc()" />
+</body>
+</html>
